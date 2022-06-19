@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+<body background = "https://miro.medium.com/max/1400/1*lJ32Bl-lHWmNMUSiSq17gQ.png">
+    <h1>Difference between HTTP1.1 vs HTTP2 :</h1>
+    
+    <p>HTTP2 Vs. HTTP1 is not a debate at all. HTTP2 is much faster and more reliable than HTTP1. HTTP1 loads a single request for every TCP connection, while HTTP2 avoids network delay by using multiplexing.</p>
+
+    <p>HTTP is a network delay sensitive protocol in the sense that if there is less network delay, then the page loads faster. However, an impressive increase in network bandwidth only slightly improves page load time. This is key to understanding the differences in performance efficiencies between the different versions of HTTP. Back in the day when people used dial up modems web pages were simple and it was the actual data transfer between the server and the client that contributed towards the largest chunk of the page load time. Today the actual downloading of resources from server takes a negligible portion of the total page load time due to the tremendous increase in bandwidth availability. It is the time taken to establish the TCP connection and making requests that impacts performance. It was initially recommended to use only two connections per hostname but today most browsers use six connections per hostname. When we talk about http vs http2 in terms of performance it is important to note that a lot of performance optimizations adopted by HTTP/1.1 introduced complexities in terms of developmental efforts as well as network congestion that HTTP/2 attempts to address.</p>
+        
+    <p>The table below points out the differentiating factors between http2 vs http1:</p>
+        
+    <p>Header CompressionHeaders are sent on every request leading to a lot of duplicate data being sent uncompressed across the wire.Header compression is included by default in HTTP/2 using HPACK.Performance OptimizationProvides support for caching to deliver pages faster.Spriting, concatenating, inlining, domain sharding are some of the optimizations used as a workaround to the ‘six connections per host’ rule.Removes the need for unnecessary optimization hacks.Protocol TypeText based protocol that is in the readable form.It is a binary protocol (HTTP requests are sent in the form of 0s and 1s). Needs to be converted back from binary in order to read it.SecuritySSL is not required but recommended. Digest authentication used in HTTP1.1 is an improvement over HTTP1.0. HTTPS uses SSL/TLS for secure encrypted communication.Though security is still not mandatory, it is mostly encrypted (though it is not enforced) since almost all clients require traffic to be encrypted. It also has some minimum standards, such as minimum key size for encryption. TLS 1.2 etc.</p>
+        
+    <p>Header CompressionHeaders are sent on every request leading to a lot of duplicate data being sent uncompressed across the wire.Header compression is included by default in HTTP/2 using HPACK.Performance OptimizationProvides support for caching to deliver pages faster.Spriting, concatenating, inlining, domain sharding are some of the optimizations used as a workaround to the ‘six connections per host’ rule.Removes the need for unnecessary optimization hacks.Protocol TypeText based protocol that is in the readable form.It is a binary protocol (HTTP requests are sent in the form of 0s and 1s). Needs to be converted back from binary in order to read it.SecuritySSL is not required but recommended. Digest authentication used in HTTP1.1 is an improvement over HTTP1.0. HTTPS uses SSL/TLS for secure encrypted communication.Though security is still not mandatory, it is mostly encrypted (though it is not enforced) since almost all clients require traffic to be encrypted. It also has some minimum standards, such as minimum key size for encryption. TLS 1.2 etc.</p>
+
+
+
+    
+    
+    <table class="table" width="100%" cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr class="trhead">
+        <td width="150">Differentiator</td>
+        <td width="150">HTTP/1.0</td>
+        <td width="150">HTTP/1.1</td>
+        <td width="150">HTTP/2</td>
+        </tr>
+        <tr>
+        <td>Year</td>
+        <td>1991</td>
+        <td>1997</td>
+        <td>2015</td>
+        </tr>
+        <tr>
+        <td>Key Features</td>
+        <td>For every TCP connection there is only one request and one response.<br>
+        <img alt="HTTP1 Protocol" width="265" height="300" data-srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1-265x300.png 265w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1.png 373w" data-src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1-265x300.png" data-sizes="(max-width: 265px) 100vw, 265px" class="alignright size-medium wp-image-416 lazyloaded" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1-265x300.png" sizes="(max-width: 265px) 100vw, 265px" srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1-265x300.png 265w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1.png 373w"><noscript><img class="alignright size-medium wp-image-416" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1-265x300.png" alt="HTTP1 Protocol" width="265" height="300" srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1-265x300.png 265w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http1.png 373w" sizes="(max-width: 265px) 100vw, 265px" /></noscript></td>
+        <td>It supports connection reuse i.e. for every TCP connection there could be multiple requests and responses, and pipelining where the client can request several resources from the server at once. However, pipelining was hard to implement due to issues such as head-of-line blocking and was not a feasible solution.<br>
+        <img alt="HTTP2 Protocol" width="265" height="300" data-srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2-265x300.png 265w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2.png 376w" data-src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2-265x300.png" data-sizes="(max-width: 265px) 100vw, 265px" class="alignright size-medium wp-image-417 ls-is-cached lazyloaded" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2-265x300.png" sizes="(max-width: 265px) 100vw, 265px" srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2-265x300.png 265w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2.png 376w"><noscript><img class="alignright size-medium wp-image-417" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2-265x300.png" alt="HTTP2 Protocol" width="265" height="300" srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2-265x300.png 265w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http2.png 376w" sizes="(max-width: 265px) 100vw, 265px" /></noscript></td>
+        <td>Uses multiplexing, where over a single TCP connection resources to be delivered are interleaved and arrive at the client almost at the same time. It is done using streams which can be prioritized, can have dependencies and individual flow control. It also provides a feature called server push that allows the server to send data that the client will need but has not yet requested.<br>
+        <img alt="HTTP3 Protocol" width="283" height="300" data-srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3-283x300.png 283w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3.png 351w" data-src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3-283x300.png" data-sizes="(max-width: 283px) 100vw, 283px" class="alignright size-medium wp-image-418 ls-is-cached lazyloaded" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3-283x300.png" sizes="(max-width: 283px) 100vw, 283px" srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3-283x300.png 283w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3.png 351w"><noscript><img class="alignright size-medium wp-image-418" src="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3-283x300.png" alt="HTTP3 Protocol" width="283" height="300" srcset="https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3-283x300.png 283w, https://cheapsslsecurity.com/p/wp-content/uploads/2019/07/http3.png 351w" sizes="(max-width: 283px) 100vw, 283px" /></noscript></td>
+        </tr>
+        <tr>
+        <td>Status Code</td>
+        <td>Can define 16 status codes; the error prompt is not specific enough.</td>
+        <td>Introduces a warning header field to carry additional information about the status of a message. Can define 24 status codes, error reporting is quicker and more efficient.</td>
+        <td>Underlying semantics of HTTP such as headers, status codes remains the same.</td>
+        </tr>
+        <tr>
+        <td>Authentication Mechanism</td>
+        <td>Uses basic authentication scheme which is unsafe since username and passwords are transmitted in clear text or base64 encoded.</td>
+        <td>It is relatively secure since it uses digest authentication, NTLM authentication.</td>
+        <td>Security concerns from previous versions will continue to be seen in HTTP/2. However, it is better equipped to deal with them due to new TLS features like connection error of type Inadequate_Security.</td>
+        </tr>
+        <tr>
+        <td>Caching</td>
+        <td>Provides support for caching via the If-Modified-Since header.</td>
+        <td>Expands on the caching support by using additional headers like cache-control, conditional headers like If-Match and by using entity tags.</td>
+        <td>HTTP/2 does not change much in terms of caching. With the server push feature if the client finds the resources are already present in the cache, it can cancel the pushed stream.</td>
+        </tr>
+        <tr>
+        <td>Web Traffic</td>
+        <td colspan="2">HTTP/1.1 provides faster delivery of web pages and reduces web traffic as compared to HTTP/1.0. However, TCP starts slowly and with domain sharding (resources can be downloaded simultaneously by using multiple domains), connection reuse and pipelining, there is an increased risk of network congestion.</td>
+        <td>HTTP/2 utilizes multiplexing and server push to effectively reduce the page load time by a greater margin along with being less sensitive to network delays.</td>
+        </tr>
+        </tbody>
+        </table>
+</body>
+</head>
+</html>
